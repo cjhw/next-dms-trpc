@@ -1,5 +1,5 @@
 import { TRPCError } from "@trpc/server";
-import { publicProcedure } from "./_unpublic";
+import { publicProcedure } from "./_unauthorized";
 
 export const authorizedProcedure = publicProcedure.use((opts) => {
   if (!opts.ctx.session.id) {
