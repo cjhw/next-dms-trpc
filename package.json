@@ -1,27 +1,47 @@
 {
   "name": "next-dms-trpc",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier \"**/*\" --write --ignore-unknown --cache",
+    "migrate": "prisma migrate dev --name init"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.1.0"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.0"
+    "@ant-design/colors": "^7.0.2",
+    "@ant-design/cssinjs": "^1.18.4",
+    "@ant-design/icons": "^5.3.0",
+    "@ant-design/nextjs-registry": "^1.0.0",
+    "@prisma/client": "^5.9.1",
+    "@tanstack/react-query": "^5.18.1",
+    "@trpc/client": "^11.0.0-next-beta.257",
+    "@trpc/react-query": "^11.0.0-next-beta.257",
+    "@trpc/server": "^11.0.0-next-beta.257",
+    "@types/node": "^20.11.16",
+    "@types/react": "^18.2.52",
+    "@types/react-dom": "^18.2.18",
+    "ahooks": "^3.7.10",
+    "antd": "^5.13.3",
+    "argon2": "^0.31.2",
+    "autoprefixer": "^10.4.17",
+    "axios": "^1.6.7",
+    "dayjs": "^1.11.10",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "^14.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "iron-session": "^8.0.1",
+    "next": "^14.1.0",
+    "postcss": "^8.4.33",
+    "prettier": "^3.2.4",
+    "prisma": "^5.9.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.4.1",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3",
+    "zod": "^3.22.4"
   }
 }
