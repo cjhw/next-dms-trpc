@@ -27,8 +27,7 @@ export const Providers = ({ children }: Props) => {
             refetchOnWindowFocus: false,
             retryDelay: (_, err) => {
               if (err instanceof TRPCClientError) {
-                const content = JSON.parse(err.message)?.[0];
-                msg.error(`${content.code}: ${content.message}`, 4.5);
+                msg.error(`${err.name}: ${err.message}`, 4.5);
               }
               return 0;
             },

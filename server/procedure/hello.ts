@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { publicProcedure } from "./_public";
+import { publicProcedure } from "./_unpublic";
 
 export const hello = publicProcedure
   .input(z.string().nullish())
