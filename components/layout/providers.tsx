@@ -1,5 +1,6 @@
 "use client";
 
+import { API_ENDPOINT } from "@/constants/api";
 import { theme } from "@/constants/theme";
 import { trpc } from "@/libs/trpc";
 import { StyleProvider } from "@ant-design/cssinjs";
@@ -39,7 +40,7 @@ export const Providers = ({ children }: Props) => {
     trpc.createClient({
       links: [
         httpLink({
-          url: "/api",
+          url: API_ENDPOINT,
         }),
       ],
     }),
