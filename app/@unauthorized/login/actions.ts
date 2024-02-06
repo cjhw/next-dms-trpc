@@ -24,7 +24,7 @@ export async function login(prevState: unknown, formData: FormData) {
     session.name = user.name;
     await session.save();
   } catch (err) {
-    if (err instanceof Error) return { message: err.message };
+    if (err instanceof Error) return { message: err.message, status: 401 };
     return { message: "Server error" };
   }
   redirect(DEFAULT_PRIVATE_ROUTE);

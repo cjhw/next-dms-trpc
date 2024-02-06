@@ -1,6 +1,5 @@
-import { FetchBtn } from "@/app/FetchBtn";
 import { Metadata } from "next";
-import { FetchBtnSecret } from "./FetchBtnSecret";
+import { SearchForm } from "./search-form";
 
 export const metadata: Metadata = {
   title: "fish 管理 - Next DMS tRPC",
@@ -9,9 +8,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div>
-      <p>fish</p>
-      <FetchBtn />
-      <FetchBtnSecret />
+      <SearchForm />
     </div>
   );
 }

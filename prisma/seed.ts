@@ -7,6 +7,15 @@ const DEFAULT_ADMIN = {
   password: "string",
 };
 
+const DEFAULT_FISH = {
+  name: "Fish",
+  col1: "COL1",
+  col2: 12.2,
+  col3: "COL3",
+  col4: "COL4",
+  col5: "COL5",
+};
+
 async function main() {
   await prisma.user.upsert({
     where: {
@@ -14,6 +23,13 @@ async function main() {
     },
     create: { ...DEFAULT_ADMIN },
     update: { ...DEFAULT_ADMIN },
+  });
+  await prisma.fish.upsert({
+    where: {
+      name: DEFAULT_FISH.name,
+    },
+    create: { ...DEFAULT_FISH },
+    update: { ...DEFAULT_FISH },
   });
 }
 main()
