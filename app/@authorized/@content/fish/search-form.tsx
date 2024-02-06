@@ -8,11 +8,13 @@ import {
   DatePicker,
   Form,
   Input,
+  Space,
   Table,
   type TableProps,
 } from "antd";
 import type { Dayjs } from "dayjs";
 import dayjs from "dayjs";
+import Link from "next/link";
 import { useEffect } from "react";
 import { getList } from "./actions";
 
@@ -69,6 +71,19 @@ export const SearchForm = () => {
     rowKey: "id",
     columns: [
       {
+        title: "操作",
+        dataIndex: "id",
+        width: 160,
+        render: (_, record) => (
+          <Space>
+            <Link href={`/fish/${record.id}`}>
+              <Button>查看</Button>
+            </Link>
+            <Button danger>刪除</Button>
+          </Space>
+        ),
+      },
+      {
         title: "名稱",
         dataIndex: "name",
       },
@@ -89,7 +104,7 @@ export const SearchForm = () => {
 
   useEffect(() => {
     formInstance.submit();
-  }, []);
+  }, [formInstance]);
 
   return (
     <div className="flex flex-col w-full gap-3">
