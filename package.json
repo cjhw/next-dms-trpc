@@ -21,7 +21,7 @@
     "@trpc/react-query": "^11.0.0-next-beta.289",
     "@trpc/server": "^11.0.0-next-beta.289",
     "@types/node": "^20.11.19",
-    "@types/react": "^18.2.55",
+    "@types/react": "^18.2.56",
     "@types/react-dom": "^18.2.19",
     "ahooks": "^3.7.10",
     "antd": "^5.14.1",
